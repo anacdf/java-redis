@@ -22,7 +22,7 @@ public class RestaurantController {
 	private RestaurantService service;
 
 	@GetMapping(value = "/findInNeighborhood")
-	public NeighborhoodRedis findInNeighborhood(@PathVariable double x, @PathVariable double y) {
+	public NeighborhoodRedis findInNeighborhood(@RequestParam double x, @RequestParam double y) {
 		return service.findInNeighborhood(0, 0);
 	}
 
