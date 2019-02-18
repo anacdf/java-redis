@@ -9,14 +9,18 @@ import org.springframework.stereotype.Service;
 public class RestaurantServiceImpl implements RestaurantService {
 
 	@Autowired
-	private RedisOperations<String, NeighborhoodRedis> redis;
+	private RestaurantMongoRepository restaurantMongoRepository;
 
 	@Autowired
-	private MongoOperations mongo;
+	private NeighborhoodMongoRepository neighborhoodMongoRepository;
+
+	@Autowired
+	private RedisRepository<NeighborhoodRedis> redisRepository;
 
 	@Override
 	public NeighborhoodRedis findInNeighborhood(double x, double y) {
 		NeighborhoodMongo neighborhoodMongo = findByLocation(x,y);
+		String redisId = "neighborhood:"+neighborhoodMongo.getId();
 		return null;
 	}
 
