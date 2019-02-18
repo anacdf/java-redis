@@ -75,7 +75,10 @@ Windows: https://github.com/ServiceStack/redis-windows
 
 ## Detalhes
 
-Criar um enpoint para encontrar o bairro em que um usuário está localizado utilizando sua localização. Verificar se o bairro está salvo no Redis e retornar caso positivo. Caso o bairro não esteja salvo, achar todos os restaurantes localizados neste bairro. Salvar no Redis o bairro e seus restaurantes e retornar.
+Criar um enpoint para encontrar o bairro em que um usuário está localizado utilizando sua localização.
+Verificar se o bairro está salvo no Redis e retornar caso positivo.
+Caso o bairro não esteja salvo, achar todos os restaurantes localizados neste bairro.
+Salvar no Redis o bairro e seus restaurantes e retornar.
 
 
 ##### Valor a ser salvo no Redis
